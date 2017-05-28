@@ -4,6 +4,9 @@ buildscript {
   }
 }
 
+def projectRootDir = buildscript.sourceFile.getParentFile().getParentFile()
+apply from: "$projectRootDir/build.gradle"
+
 apply plugin: 'com.android.library'
 
 android {
@@ -44,4 +47,4 @@ dependencies {
   testCompile dep.mockWebServer
 }
 
-apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
+apply from: "$projectRootDir/gradle/gradle-mvn-push.gradle"

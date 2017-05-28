@@ -28,4 +28,5 @@ subprojects {
   }
 }
 
-apply from: rootProject.file('dependencies.gradle')
+def projectRootDir = buildscript.sourceFile.getParentFile()
+apply from: "$projectRootDir/dependencies.gradle"
