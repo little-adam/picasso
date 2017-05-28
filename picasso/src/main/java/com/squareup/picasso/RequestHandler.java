@@ -15,11 +15,13 @@
  */
 package com.squareup.picasso;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.NetworkInfo;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+
+import com.squareup.picasso.gdx.Bitmap;
+import com.squareup.picasso.gdx.BitmapFactory;
+
 import java.io.IOException;
 import okio.Source;
 

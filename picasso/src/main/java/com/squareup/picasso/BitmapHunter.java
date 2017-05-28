@@ -15,12 +15,14 @@
  */
 package com.squareup.picasso;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.net.NetworkInfo;
 import android.os.Build;
 import android.view.Gravity;
+
+import com.squareup.picasso.gdx.Bitmap;
+import com.squareup.picasso.gdx.BitmapFactory;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;

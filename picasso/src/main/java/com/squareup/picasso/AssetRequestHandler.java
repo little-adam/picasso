@@ -15,9 +15,11 @@
  */
 package com.squareup.picasso;
 
-import android.content.Context;
-import android.content.res.AssetManager;
 import android.net.Uri;
+
+import com.squareup.picasso.gdx.AssetManager;
+import com.squareup.picasso.gdx.Context;
+
 import java.io.IOException;
 import okio.Okio;
 import okio.Source;

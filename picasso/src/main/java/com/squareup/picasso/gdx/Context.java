@@ -22,4 +22,12 @@ public class Context {
 	public Resources getResources(){
 		return null;
 	}
+
+	public ContentResolver getContentResolver(){
+		return null;
+	}
+
+	public AssetManager getAssets(){
+		return null;
+	}
 }

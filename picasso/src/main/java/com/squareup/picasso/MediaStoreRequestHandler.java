@@ -15,21 +15,23 @@
  */
 package com.squareup.picasso;
 
-import android.content.ContentResolver;
-import android.content.Context;
-import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
-import android.provider.MediaStore;
+
+import com.squareup.picasso.gdx.MediaStore;
+import com.squareup.picasso.gdx.Bitmap;
+import com.squareup.picasso.gdx.BitmapFactory;
+import com.squareup.picasso.gdx.ContentResolver;
+import com.squareup.picasso.gdx.Context;
+import com.squareup.picasso.gdx.Cursor;
+
 import java.io.IOException;
 import okio.Okio;
 import okio.Source;
 
+import static com.squareup.picasso.gdx.MediaStore.Images;
+import static com.squareup.picasso.gdx.MediaStore.Video;
 import static android.content.ContentResolver.SCHEME_CONTENT;
 import static android.content.ContentUris.parseId;
-import static android.provider.MediaStore.Images;
-import static android.provider.MediaStore.Video;
 import static android.provider.MediaStore.Images.Thumbnails.FULL_SCREEN_KIND;
 import static android.provider.MediaStore.Images.Thumbnails.MICRO_KIND;
 import static android.provider.MediaStore.Images.Thumbnails.MINI_KIND;

@@ -15,7 +15,7 @@
  */
 package com.squareup.picasso;
 
-import android.graphics.Bitmap;
+import com.squareup.picasso.gdx.Bitmap;
 
 /** Image transformation. */
 public interface Transformation {

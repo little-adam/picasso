@@ -15,8 +15,9 @@
  */
 package com.squareup.picasso;
 
-import android.content.ContentResolver;
-import android.content.Context;
+import com.squareup.picasso.gdx.ContentResolver;
+import com.squareup.picasso.gdx.Context;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;

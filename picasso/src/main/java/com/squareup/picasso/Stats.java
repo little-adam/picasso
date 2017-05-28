@@ -15,11 +15,12 @@
  */
 package com.squareup.picasso;
 
-import android.graphics.Bitmap;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.Message;
+
+import com.squareup.picasso.gdx.Bitmap;
 
 import static android.os.Process.THREAD_PRIORITY_BACKGROUND;
 
