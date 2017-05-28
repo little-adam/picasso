@@ -17,7 +17,6 @@ package com.squareup.picasso;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
@@ -29,6 +28,8 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.widget.ImageView;
 import android.widget.RemoteViews;
+
+import com.squareup.picasso.gdx.Color;
 
 import java.io.File;
 import java.lang.ref.ReferenceQueue;

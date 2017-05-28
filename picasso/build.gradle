@@ -36,6 +36,8 @@ android {
 }
 
 dependencies {
+	compile project(":LibGdxUtil")
+
   compile dep.okhttp
   compile dep.supportAnnotations
   testCompile dep.junit

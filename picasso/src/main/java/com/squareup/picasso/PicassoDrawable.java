@@ -15,20 +15,21 @@
  */
 package com.squareup.picasso;
 
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.ColorFilter;
-import android.graphics.Paint;
-import android.graphics.Path;
-import android.graphics.Rect;
-import android.graphics.drawable.AnimationDrawable;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.SystemClock;
-import android.widget.ImageView;
 
-import static android.graphics.Color.WHITE;
+import com.squareup.picasso.gdx.AnimationDrawable;
+import com.squareup.picasso.gdx.Bitmap;
+import com.squareup.picasso.gdx.BitmapDrawable;
+import com.squareup.picasso.gdx.Canvas;
+import com.squareup.picasso.gdx.Color;
+import com.squareup.picasso.gdx.ColorFilter;
+import com.squareup.picasso.gdx.Context;
+import com.squareup.picasso.gdx.Drawable;
+import com.squareup.picasso.gdx.ImageView;
+import com.squareup.picasso.gdx.Paint;
+import com.squareup.picasso.gdx.Path;
+import com.squareup.picasso.gdx.Rect;
+
 import static com.squareup.picasso.Picasso.LoadedFrom.MEMORY;
 
 final class PicassoDrawable extends BitmapDrawable {
@@ -41,7 +42,7 @@ final class PicassoDrawable extends BitmapDrawable {
    * image.
    */
   static void setBitmap(ImageView target, Context context, Bitmap bitmap,
-      Picasso.LoadedFrom loadedFrom, boolean noFade, boolean debugging) {
+						Picasso.LoadedFrom loadedFrom, boolean noFade, boolean debugging) {
     Drawable placeholder = target.getDrawable();
     if (placeholder instanceof AnimationDrawable) {
       ((AnimationDrawable) placeholder).stop();
@@ -89,7 +90,8 @@ final class PicassoDrawable extends BitmapDrawable {
     }
   }
 
-  @Override public void draw(Canvas canvas) {
+  @Override
+  public void draw(Canvas canvas) {
     if (!animating) {
       super.draw(canvas);
     } else {
@@ -116,7 +118,8 @@ final class PicassoDrawable extends BitmapDrawable {
     }
   }
 
-  @Override public void setAlpha(int alpha) {
+  @Override
+  public void setAlpha(int alpha) {
     this.alpha = alpha;
     if (placeholder != null) {
       placeholder.setAlpha(alpha);
@@ -124,14 +127,16 @@ final class PicassoDrawable extends BitmapDrawable {
     super.setAlpha(alpha);
   }
 
-  @Override public void setColorFilter(ColorFilter cf) {
+  @Override
+  public void setColorFilter(ColorFilter cf) {
     if (placeholder != null) {
       placeholder.setColorFilter(cf);
     }
     super.setColorFilter(cf);
   }
 
-  @Override protected void onBoundsChange(Rect bounds) {
+  @Override
+  protected void onBoundsChange(Rect bounds) {
     if (placeholder != null) {
       placeholder.setBounds(bounds);
     }
@@ -139,7 +144,7 @@ final class PicassoDrawable extends BitmapDrawable {
   }
 
   private void drawDebugIndicator(Canvas canvas) {
-    DEBUG_PAINT.setColor(WHITE);
+    DEBUG_PAINT.setColor(Color.WHITE);
     Path path = getTrianglePath(0, 0, (int) (16 * density));
     canvas.drawPath(path, DEBUG_PAINT);
 
